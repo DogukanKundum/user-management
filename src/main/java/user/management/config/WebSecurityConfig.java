@@ -36,17 +36,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         // Entry points
         http.authorizeRequests()//
                 .antMatchers("/users/**",
-                        "/**",
-                        "/swagger-ui/**",
-                        "/store/**",
-                        "/category/**",
-                        "/hashtag/**",
-                        "/auction/**",
-                        "/product/**",
-                        "/store-owner/**",
-                        "/users/register",
-                        "/swagger-ui.**",
-                        "/favicon**").permitAll()
+                        "/**").permitAll()
                 .anyRequest().authenticated();
 
         // If a user try to access a resource without having enough permissions
